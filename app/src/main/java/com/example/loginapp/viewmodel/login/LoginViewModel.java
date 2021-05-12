@@ -76,9 +76,9 @@ public class LoginViewModel extends ViewModel {
     }
 
     public void onGenderClick(){
-        new GenderLayout().showGender(context,login,view);
+        new GenderLayout().showGender(context,login,view,gender);
 
-        gender.setValue(login.getGender());
+
 
     }
 
@@ -100,6 +100,8 @@ public class LoginViewModel extends ViewModel {
 
 
     public void  callVerifyAll(){
+
+
 
         VerifyAllRequest verifyAllRequest = new VerifyAllRequest();
         verifyAllRequest.setUserName("+91"+login.getMobileno());

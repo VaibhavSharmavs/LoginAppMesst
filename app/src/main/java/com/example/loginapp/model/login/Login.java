@@ -2,15 +2,27 @@ package com.example.loginapp.model.login;
 
 import android.util.Patterns;
 
+import androidx.databinding.BaseObservable;
+import androidx.databinding.Bindable;
 
-public class Login {
+import com.example.loginapp.BR;
 
 
-    private String username,password,usernameSignUp,passwordSignUp,fistName,lastName,dob,gender,mobileno;
-    private String fcmToken;
+public class Login  {
+    public String getUsername() {
+        return username;
+    }
 
-    public Login() {
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getUsernameSignUp() {
@@ -57,6 +69,7 @@ public class Login {
         return gender;
     }
 
+
     public void setGender(String gender) {
         this.gender = gender;
     }
@@ -69,18 +82,6 @@ public class Login {
         this.mobileno = mobileno;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
     public String getFcmToken() {
         return fcmToken;
     }
@@ -89,9 +90,15 @@ public class Login {
         this.fcmToken = fcmToken;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public String username,password,usernameSignUp,passwordSignUp,fistName,lastName,dob,gender,mobileno;
+
+
+    private String fcmToken;
+
+    public Login() {
+
     }
+
 
     public Login(String mobile, String password) {
         this.username = mobile;

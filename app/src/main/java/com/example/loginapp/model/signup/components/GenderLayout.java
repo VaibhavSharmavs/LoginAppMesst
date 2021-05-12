@@ -3,6 +3,7 @@ package com.example.loginapp.model.signup.components;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -25,7 +26,7 @@ public class GenderLayout {
     Button submitGender;
     String selectedGender = "";
 
-    public void  showGender(Context context, Login login, View view) {
+    public void  showGender(Context context, Login login, View view, MutableLiveData<String> gender) {
         final Dialog genderDialog = new Dialog(view.getContext());
         genderDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         genderDialog.setContentView(R.layout.dialog_gender);
@@ -103,7 +104,9 @@ public class GenderLayout {
             public void onClick(View v) {
                 if(selectedGender.length()>1) {
 
-                    login.setGender(selectedGender);
+
+                    gender.setValue(selectedGender);
+
                     genderDialog.dismiss();
                 }else {
                     Toast.makeText(context, "Please Select Gender", Toast.LENGTH_SHORT).show();

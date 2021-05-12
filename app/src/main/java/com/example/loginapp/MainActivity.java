@@ -33,8 +33,7 @@ import com.example.loginapp.network.APIService;
 import com.example.loginapp.network.RetrofitInstance;
 import com.example.loginapp.viewmodel.login.LoginViewModel;
 import com.example.loginapp.viewmodel.login.LoginViewModelFactory;
-import com.example.loginapp.viewmodel.signup.SignUpViewModel;
-import com.example.loginapp.viewmodel.signup.SignUpViewModelFactory;
+
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -61,6 +60,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         ActivityMainBinding binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
 
+        binding.setLifecycleOwner(this);
+
         tv_signUp = findViewById(R.id.tv_signUp);
         tv_login = findViewById(R.id.tv_login);
         login_rl = findViewById(R.id.login_rl);
@@ -79,6 +80,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tv_login.setOnClickListener(this);
 
 
+
+
         LoginViewModel loginViewModel = new ViewModelProvider(MainActivity.this,
                 new LoginViewModelFactory(
                         new Login(),getApplicationContext(),getWindow().getDecorView().getRootView())).get(LoginViewModel.class);
@@ -88,10 +91,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-//        SignUpViewModel signUpViewModel = new ViewModelProvider(MainActivity.this,
-//                new SignUpViewModelFactory(
-//                        new SignUp(),getApplicationContext(),getWindow().getDecorView().getRootView())).get(SignUpViewModel.class);
-//        binding.setSignUpModel(signUpViewModel);
+
 
 
         edit_username.addTextChangedListener(new TextWatcher() {

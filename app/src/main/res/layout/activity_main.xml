@@ -536,7 +536,7 @@
 
                                 <TextView
                                     android:id="@+id/edit_gender"
-                                    android:text="@={loginModel.gender}"
+                                    android:text="@{loginModel.gender}"
                                     android:onClick="@{() -> loginModel.onGenderClick()}"
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
