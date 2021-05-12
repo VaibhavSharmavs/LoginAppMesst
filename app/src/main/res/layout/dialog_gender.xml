@@ -124,7 +124,7 @@
     <Button
         android:id="@+id/selectGender"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/_25sdp"
+        android:layout_height="@dimen/_50sdp"
         android:layout_marginTop="@dimen/_10sdp"
         android:background="@drawable/half_drop_shadow"
         android:textColor="@color/white"

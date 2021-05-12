@@ -68,6 +68,9 @@ public class VerficationCode extends AppCompatActivity {
     LinearLayout txtCountLayout;
     private static final int REQ_USER_CONSENT = 200;
 
+    private String firstName,lastName,dob,gender,mobileno,password,username,lat,lng;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +79,17 @@ public class VerficationCode extends AppCompatActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
-        setContentView(R.layout.activity_verfication_code   );
+        setContentView(R.layout.activity_verfication_code);
+
+        firstName = getIntent().getExtras().getString("firstName");
+        lastName = getIntent().getExtras().getString("lastName");
+        dob = getIntent().getExtras().getString("dob");
+        gender = getIntent().getExtras().getString("gender");
+        mobileno = getIntent().getExtras().getString("mobileno");
+        password = getIntent().getExtras().getString("password");
+        username = getIntent().getExtras().getString("username");
+
+
         txtCountLayout = findViewById(R.id.txtCountLayout);
         tct_expire = findViewById(R.id.tct_expire);
         otp_submit = findViewById(R.id.otp_submit);
@@ -140,6 +153,9 @@ public class VerficationCode extends AppCompatActivity {
     private void verifyOTPAll(){
 
         VerifyOtpAllRequest verifyOtpAllRequest = new VerifyOtpAllRequest();
+        verifyOtpAllRequest.setOtp(pinView.getText().toString());
+        verifyOtpAllRequest.setUserName(username);
+        verifyOtpAllRequest.setFcmToken("");
 
         APIService apiService = RetrofitInstance.getRetrofitInstance().create(APIService.class);
         Call<VerifyOtpAllResponse> call = apiService.verifyOtpAll(verifyOtpAllRequest);
@@ -174,6 +190,33 @@ public class VerficationCode extends AppCompatActivity {
     private void register(){
 
         RegisterRequest registerRequest = new RegisterRequest();
+        registerRequest.setFirstName(firstName);
+        registerRequest.setLastName(lastName);
+        registerRequest.setPassword(password);
+        registerRequest.setGender("gender");
+        registerRequest.setMobile(mobileno);
+        registerRequest.setEmail("");
+        registerRequest.setgToken("");
+        registerRequest.setFbToken("");
+        registerRequest.setLocation("");
+        registerRequest.setAccountType("PUBLIC");
+        registerRequest.setDeviceVoipToken("");
+        registerRequest.setFriendReferral("");
+        registerRequest.setNotification("1");
+        registerRequest.setMediaAutoDownload("false");
+        registerRequest.setDnd("false");
+        registerRequest.setLat(lat);
+        registerRequest.setLag(lng);
+        registerRequest.setDeviceName(device_name);
+        registerRequest.setDeviceModel(device_model);
+        registerRequest.setDeviceVersion(android_version);
+        registerRequest.setOsType("Android");
+        registerRequest.setImeiNumber(getIMEIDeviceId());
+        registerRequest.setTimeZone(getCurrentTizeZone().getDisplayName(false, TimeZone.SHORT));
+        registerRequest.setDateZone(getCurrentTizeZone().getDisplayName(false, TimeZone.SHORT));
+        registerRequest.setStatus("");
+        registerRequest.setDob("dob");
+
 
         APIService apiService = RetrofitInstance.getRetrofitInstance().create(APIService.class);
         Call<RegisterResponse> call = apiService.register(registerRequest);
@@ -181,10 +224,15 @@ public class VerficationCode extends AppCompatActivity {
             @Override
             public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
 
-                Log.d("VerifyOTPAll", response.body().getData().getToken());
 
                 if (response.code() == 200 && response.body() != null) {
                     if (response.body().getCode() == 1) {
+
+
+                        Log.d("Register","Success");
+
+
+                        Log.d("Register",response.body().getData().getNewUser().getUsername());
 
 
 
@@ -246,10 +294,12 @@ public class VerficationCode extends AppCompatActivity {
     }
 
 
-    public void getCurrentTizeZone() {
+    public TimeZone getCurrentTizeZone() {
         TimeZone tz = TimeZone.getDefault();
         System.out.println("TimeZone   " + tz.getDisplayName(false, TimeZone.SHORT) + " Timezone id :: " + tz.getID());
         //  TimeZone GMT+09:30 Timezone id :: Australia/Darwin  //timeZone format
+
+        return tz;
 
     }
 
@@ -391,11 +441,9 @@ public class VerficationCode extends AppCompatActivity {
 
                     Location location = locationResult.getLastLocation();
                     if (location != null) {
-                        String lat = location.getLatitude() + "";
-                        String lng = location.getLongitude() + "";
+                         lat = location.getLatitude() + "";
+                         lng = location.getLongitude() + "";
 
-//                        SharedPrefreances.setSharedPreferenceString(context, SharedPrefreances.Reg_lat, lat);
-//                        SharedPrefreances.setSharedPreferenceString(context, SharedPrefreances.Reg_lng, lng);
 //                        //String locationname = getAddress(location.getLatitude(), location.getLongitude());
                         Log.e("TAG", lat + "," + lng);
 

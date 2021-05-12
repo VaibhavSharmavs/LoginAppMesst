@@ -66,7 +66,6 @@ public class SignUpViewModel extends ViewModel {
     }
 
     public void onGenderClick(){
-        new GenderLayout().showGender(context,gender,view);
 
     }
 
@@ -74,48 +73,13 @@ public class SignUpViewModel extends ViewModel {
 
         signUp.setMobileno(mobileno.getValue());
 
-        callVerifyAll();
 
     }
 
 
-    public void  callVerifyAll(){
-
-        VerifyUserNameRequest verifyUserNameRequest = new VerifyUserNameRequest();
-        verifyUserNameRequest.setUsername(String.valueOf(signUp.getMobileno()));
-
-        APIService apiService = RetrofitInstance.getRetrofitInstance().create(APIService.class);
-        Call<VerifyUserNameResponse> call = apiService.verifyAll(verifyUserNameRequest);
-        call.enqueue(new Callback<VerifyUserNameResponse>() {
-            @Override
-            public void onResponse(Call<VerifyUserNameResponse> call, Response<VerifyUserNameResponse> response) {
-
-                if(response.code()==200&& response.body()!=null){
-
-                    Log.d("VerifyAll", response.body().getData().getMessage());
-
-
-                    Intent intent = new Intent(context, VerficationCode.class);
-                    context.startActivity(intent);
-
-                }
 
 
 
-
-            }
-
-            @Override
-            public void onFailure(Call<VerifyUserNameResponse> call, Throwable t) {
-
-                Log.d("Error",t.toString());
-
-            }
-        });
-
-
-
-    }
 
     private void showDataPicker() {
         final Dialog setDate = new Dialog(context);

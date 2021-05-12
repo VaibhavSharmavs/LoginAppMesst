@@ -15,6 +15,7 @@ import androidx.core.content.ContextCompat;
 import androidx.lifecycle.MutableLiveData;
 
 import com.example.loginapp.R;
+import com.example.loginapp.model.login.Login;
 
 public class GenderLayout {
 
@@ -24,7 +25,7 @@ public class GenderLayout {
     Button submitGender;
     String selectedGender = "";
 
-    public void  showGender(Context context, MutableLiveData<String> gender,View view) {
+    public void  showGender(Context context, Login login, View view) {
         final Dialog genderDialog = new Dialog(view.getContext());
         genderDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         genderDialog.setContentView(R.layout.dialog_gender);
@@ -102,7 +103,7 @@ public class GenderLayout {
             public void onClick(View v) {
                 if(selectedGender.length()>1) {
 
-                    gender.setValue(selectedGender);
+                    login.setGender(selectedGender);
                     genderDialog.dismiss();
                 }else {
                     Toast.makeText(context, "Please Select Gender", Toast.LENGTH_SHORT).show();

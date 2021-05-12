@@ -8,6 +8,7 @@ import com.example.loginapp.model.signup.VerifyUserNameResponse;
 import com.example.loginapp.model.signup.RegisterRequest;
 import com.example.loginapp.model.signup.VerifyOtpAllRequest;
 import com.example.loginapp.model.signup.VerifyOtpAllResponse;
+import com.example.loginapp.model.signup.components.VerifyAllRequest;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -22,7 +23,7 @@ public interface APIService {
     Call<VerifyUserNameResponse> verifyUsername(@Body VerifyUserNameRequest verifyParam);
 
     @POST("/pub/verifyAll")
-    Call<VerifyUserNameResponse> verifyAll(@Body VerifyUserNameRequest verifyParam);
+    Call<VerifyUserNameResponse> verifyAll(@Body VerifyAllRequest verifyParam);
 
     @POST("/pub/verifyOtpAll")
     Call<VerifyOtpAllResponse> verifyOtpAll(@Body VerifyOtpAllRequest verifyParam);

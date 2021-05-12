@@ -30,6 +30,7 @@ import com.example.loginapp.model.signup.VerifyUserNameRequest;
 import com.example.loginapp.model.signup.VerifyUserNameResponse;
 import com.example.loginapp.model.signup.components.DatePicker.date.DatePicker;
 import com.example.loginapp.model.signup.components.GenderLayout;
+import com.example.loginapp.model.signup.components.VerifyAllRequest;
 import com.example.loginapp.network.APIService;
 import com.example.loginapp.network.RetrofitInstance;
 
@@ -75,13 +76,23 @@ public class LoginViewModel extends ViewModel {
     }
 
     public void onGenderClick(){
-        new GenderLayout().showGender(context,gender,view);
+        new GenderLayout().showGender(context,login,view);
+
+        gender.setValue(login.getGender());
 
     }
 
     public void onSignUpClick(){
 
+        login.setFistName(firstName.getValue());
+        login.setLastName(lastName.getValue());
+        login.setGender(gender.getValue());
+        login.setDob(dob.getValue());
         login.setMobileno(mobileno.getValue());
+        login.setUsernameSignUp(userNameSignUp.getValue());
+        login.setPasswordSignUp(passwordSignUp.getValue());
+
+
 
         callVerifyAll();
 
@@ -90,11 +101,11 @@ public class LoginViewModel extends ViewModel {
 
     public void  callVerifyAll(){
 
-        VerifyUserNameRequest verifyUserNameRequest = new VerifyUserNameRequest();
-        verifyUserNameRequest.setUsername(String.valueOf(login.getMobileno()));
+        VerifyAllRequest verifyAllRequest = new VerifyAllRequest();
+        verifyAllRequest.setUserName("+91"+login.getMobileno());
 
         APIService apiService = RetrofitInstance.getRetrofitInstance().create(APIService.class);
-        Call<VerifyUserNameResponse> call = apiService.verifyAll(verifyUserNameRequest);
+        Call<VerifyUserNameResponse> call = apiService.verifyAll(verifyAllRequest);
         call.enqueue(new Callback<VerifyUserNameResponse>() {
             @Override
             public void onResponse(Call<VerifyUserNameResponse> call, Response<VerifyUserNameResponse> response) {
@@ -105,10 +116,18 @@ public class LoginViewModel extends ViewModel {
 
 
                     Intent intent = new Intent(context, VerficationCode.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+                    intent.putExtra("firstName",login.getFistName());
+                    intent.putExtra("lastName",login.getLastName());
+                    intent.putExtra("password",login.getPasswordSignUp());
+                    intent.putExtra("username",login.getUsernameSignUp());
+                    intent.putExtra("gender",login.getGender());
+                    intent.putExtra("mobileno",login.getMobileno());
+                    intent.putExtra("dob",login.getDob());
                     context.startActivity(intent);
 
                 }
-
 
 
 
@@ -125,6 +144,8 @@ public class LoginViewModel extends ViewModel {
 
 
     }
+
+
 
     private void showDataPicker() {
         final Dialog setDate = new Dialog(view.getContext());
