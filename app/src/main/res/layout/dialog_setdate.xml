@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
         android:layout_centerInParent="true">
-        <com.example.loginapp.model.signup.components.DatePicker.date.DatePicker
+        <com.meest.model.signup.components.DatePicker.date.DatePicker
             android:id="@+id/datePicker"
             app:wheelCurtainBorder="false"
             app:selectedTextColor="#D90A79"

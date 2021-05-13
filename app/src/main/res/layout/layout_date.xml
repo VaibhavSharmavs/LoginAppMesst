@@ -42,21 +42,21 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <com.example.loginapp.model.signup.components.DatePicker.date.DayPicker
+        <com.meest.model.signup.components.DatePicker.date.DayPicker
             android:id="@+id/dayPicker_layout_date"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:halfVisibleItemCount="2" />
 
-        <com.example.loginapp.model.signup.components.DatePicker.date.MonthPicker
+        <com.meest.model.signup.components.DatePicker.date.MonthPicker
             android:id="@+id/monthPicker_layout_date"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:halfVisibleItemCount="2" />
 
-        <com.example.loginapp.model.signup.components.DatePicker.date.YearPicker
+        <com.meest.model.signup.components.DatePicker.date.YearPicker
             android:id="@+id/yearPicker_layout_date"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
