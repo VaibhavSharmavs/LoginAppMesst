@@ -49,7 +49,6 @@ public class LoginViewModel extends ViewModel {
 
 
     public void  callLogin(){
-
         APIService apiService = RetrofitInstance.getRetrofitInstance().create(APIService.class);
         Call<LoginResponseModel> call = apiService.login(login);
         call.enqueue(new Callback<LoginResponseModel>() {
@@ -67,8 +66,5 @@ public class LoginViewModel extends ViewModel {
 
             }
         });
-
-
-
     }
 }
