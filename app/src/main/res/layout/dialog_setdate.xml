@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="@color/transparent"
+    android:layoutDirection="ltr"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="@dimen/_20sdp"
+        android:padding="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        android:layout_centerInParent="true">
+        <com.example.loginapp.model.signup.components.DatePicker.date.DatePicker
+            android:id="@+id/datePicker"
+            app:wheelCurtainBorder="false"
+            app:selectedTextColor="#D90A79"
+            app:halfVisibleItemCount="1"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:paddingTop="@dimen/_20sdp"
+            android:paddingBottom="@dimen/_20sdp"
+            android:divider="@color/black"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:theme="@style/MeeastTheme.DatePicker"
+            android:layout_height="wrap_content"/>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

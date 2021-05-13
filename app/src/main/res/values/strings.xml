@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">LoginApp</string>
+
+
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="prefer_not_n_to_disclose">Prefer not \n to disclose</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="select">Select</string>
+    <string name="ad_attribution" translatable="false">Ad</string>
+    <string name="title_activity_verification_code">VerificationCode</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="Please_Enable_Location">Please Enable Location</string>
+
+    <string name="Code_epires_in">Code expire in</string>
 </resources>
