@@ -6,11 +6,11 @@
     <data>
         <variable
             name="loginModel"
-            type="com.example.loginapp.viewmodel.login.LoginViewModel" />
+            type="com.meest.viewmodel.login.LoginViewModel" />
 
 <!--        <variable-->
 <!--            name="signUpModel"-->
-<!--            type="com.example.loginapp.viewmodel.signup.SignUpViewModel" />-->
+<!--            type="com.loginapp.viewmodel.signup.SignUpViewModel" />-->
     </data>
 
     <RelativeLayout
@@ -96,7 +96,7 @@
                     </RelativeLayout>
                 </LinearLayout>
 
-                <com.example.loginapp.model.login.components.RoundedView
+                <com.meest.model.login.components.RoundedView
                     android:id="@+id/main_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -556,7 +556,7 @@
                         </LinearLayout>
 
                     </LinearLayout>
-                </com.example.loginapp.model.login.components.RoundedView>
+                </com.meest.model.login.components.RoundedView>
 
                 <RelativeLayout
                     android:id="@+id/login_submit"
