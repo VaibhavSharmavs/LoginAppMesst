@@ -1,4 +1,4 @@
-package com.example.loginapp.viewmodel.chat;
+package com.meest.viewmodel.chat;
 
 import androidx.lifecycle.ViewModel;
 

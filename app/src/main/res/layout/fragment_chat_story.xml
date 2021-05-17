@@ -4,11 +4,11 @@
     <data>
         <variable
             name="chatStoryFragmentModel"
-            type="com.example.loginapp.viewmodel.chat.ChatStoryFragmentViewModel"/>
+            type="com.meest.viewmodel.chat.ChatStoryFragmentViewModel"/>
 
         <variable
             name="chatStoryListAdapter"
-            type="com.example.loginapp.view.adapters.chat.ChatStoryListAdapter" />
+            type="com.meest.view.adapters.chat.ChatStoryListAdapter" />
     </data>
 
 

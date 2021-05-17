@@ -1,4 +1,4 @@
-package com.example.loginapp.model.chat.chatmodel;
+package com.meest.model.chat.chatmodel;
 
 public class ChatTextModel {
     public String getMessage() {

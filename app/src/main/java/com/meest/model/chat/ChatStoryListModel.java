@@ -1,4 +1,4 @@
-package com.example.loginapp.model.chat;
+package com.meest.model.chat;
 
 public class ChatStoryListModel {
     public String getName() {

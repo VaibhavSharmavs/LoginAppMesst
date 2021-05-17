@@ -1,4 +1,4 @@
-package com.example.loginapp.viewmodel.login;
+package com.meest.viewmodel.login;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -11,16 +11,16 @@ import android.widget.Toast;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.example.loginapp.R;
-import com.example.loginapp.view.activities.VerficationCode;
-import com.example.loginapp.model.login.Login;
-import com.example.loginapp.model.login.LoginResponseModel;
-import com.example.loginapp.model.signup.VerifyUserNameResponse;
-import com.example.loginapp.model.signup.components.DatePicker.date.DatePicker;
-import com.example.loginapp.model.signup.components.GenderLayout;
-import com.example.loginapp.model.signup.components.VerifyAllRequest;
-import com.example.loginapp.network.APIService;
-import com.example.loginapp.network.RetrofitInstance;
+import com.meest.R;
+import com.meest.model.login.Login;
+import com.meest.model.login.LoginResponseModel;
+import com.meest.model.signup.VerifyUserNameResponse;
+import com.meest.model.signup.components.DatePicker.date.DatePicker;
+import com.meest.model.signup.components.GenderLayout;
+import com.meest.model.signup.components.VerifyAllRequest;
+import com.meest.network.APIService;
+import com.meest.network.RetrofitInstance;
+import com.meest.view.activities.VerficationCode;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

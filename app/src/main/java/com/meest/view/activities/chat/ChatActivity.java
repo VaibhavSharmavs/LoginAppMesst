@@ -1,4 +1,4 @@
-package com.example.loginapp.view.activities.chat;
+package com.meest.view.activities.chat;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -8,14 +8,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 
-import com.example.loginapp.R;
 import com.example.loginapp.view.adapters.ViewPagerApdater;
-import com.example.loginapp.view.fragments.CallHistoryFragment;
-import com.example.loginapp.view.fragments.ChatListFragment;
-import com.example.loginapp.view.fragments.ChatStoryFragment;
-import com.example.loginapp.view.fragments.GroupFragment;
-import com.example.loginapp.view.fragments.TaskListFragment;
+
 import com.google.android.material.tabs.TabLayout;
+import com.meest.R;
+import com.meest.view.fragments.CallHistoryFragment;
+import com.meest.view.fragments.ChatListFragment;
+import com.meest.view.fragments.ChatStoryFragment;
+import com.meest.view.fragments.GroupFragment;
+import com.meest.view.fragments.TaskListFragment;
 
 import java.util.ArrayList;
 import java.util.List;

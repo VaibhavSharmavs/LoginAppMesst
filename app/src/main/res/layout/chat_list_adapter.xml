@@ -5,7 +5,7 @@
     <data>
         <variable
             name="chatViewModel"
-            type="com.example.loginapp.viewmodel.chat.ChatViewModel"/>
+            type="com.meest.viewmodel.chat.ChatViewModel"/>
     </data>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"

@@ -1,4 +1,4 @@
-package com.example.loginapp.view.fragments;
+package com.meest.view.fragments;
 
 import android.os.Bundle;
 
@@ -10,12 +10,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.loginapp.R;
-import com.example.loginapp.databinding.FragmentChatStoryBinding;
-import com.example.loginapp.model.chat.ChatStoryFragmentModel;
-import com.example.loginapp.model.chat.ChatStoryListModel;
-import com.example.loginapp.view.adapters.chat.ChatStoryListAdapter;
-import com.example.loginapp.viewmodel.chat.ChatStoryFragmentViewModel;
+import com.meest.R;
+import com.meest.databinding.FragmentChatStoryBinding;
+import com.meest.model.chat.ChatStoryFragmentModel;
+import com.meest.model.chat.ChatStoryListModel;
+import com.meest.view.adapters.chat.ChatStoryListAdapter;
+import com.meest.viewmodel.chat.ChatStoryFragmentViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +41,7 @@ public class ChatStoryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        fragmentChatStoryBinding =  DataBindingUtil.inflate(inflater,R.layout.fragment_chat_story, container, false);
+        fragmentChatStoryBinding =  DataBindingUtil.inflate(inflater, R.layout.fragment_chat_story, container, false);
         fragmentChatStoryBinding.setChatStoryFragmentModel(new ChatStoryFragmentViewModel(chatStoryFragmentModel));
         fragmentChatStoryBinding.setLifecycleOwner(this);
 

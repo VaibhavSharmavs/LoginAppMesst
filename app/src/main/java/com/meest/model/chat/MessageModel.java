@@ -1,4 +1,4 @@
-package com.example.loginapp.model.chat;
+package com.meest.model.chat;
 
 public class MessageModel {
     public static final int TYPE_MESSAGE = 0;

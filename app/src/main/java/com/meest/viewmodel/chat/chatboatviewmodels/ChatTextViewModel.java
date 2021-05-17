@@ -1,6 +1,6 @@
-package com.example.loginapp.viewmodel.chat.chatboatviewmodels;
+package com.meest.viewmodel.chat.chatboatviewmodels;
 
-import com.example.loginapp.model.chat.chatmodel.ChatTextModel;
+import com.meest.model.chat.chatmodel.ChatTextModel;
 
 public class ChatTextViewModel {
 

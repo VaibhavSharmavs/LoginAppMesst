@@ -1,9 +1,8 @@
-package com.example.loginapp.viewmodel.chat;
-
+package com.meest.viewmodel.chat;
 
 import androidx.lifecycle.ViewModel;
 
-import com.example.loginapp.model.chat.ChatStoryListModel;
+import com.meest.model.chat.ChatStoryListModel;
 
 
 public class StoryViewModel extends ViewModel  {

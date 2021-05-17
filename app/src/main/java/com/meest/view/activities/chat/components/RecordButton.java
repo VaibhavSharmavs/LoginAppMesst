@@ -1,4 +1,4 @@
-package com.example.loginapp.view.activities.chat.components;
+package com.meest.view.activities.chat.components;
 
 import android.Manifest;
 import android.animation.AnimatorSet;
@@ -22,7 +22,8 @@ import androidx.appcompat.content.res.AppCompatResources;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.app.ActivityCompat;
 
-import com.example.loginapp.R;
+
+import com.meest.R;
 
 import java.io.File;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.example.loginapp.view.adapters.chat;
+package com.meest.view.adapters.chat;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,10 +7,11 @@ import android.view.ViewGroup;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.loginapp.R;
-import com.example.loginapp.databinding.RowChatStoryItemBinding;
-import com.example.loginapp.model.chat.ChatStoryListModel;
-import com.example.loginapp.viewmodel.chat.StoryViewModel;
+
+import com.meest.R;
+import com.meest.databinding.RowChatStoryItemBinding;
+import com.meest.model.chat.ChatStoryListModel;
+import com.meest.viewmodel.chat.StoryViewModel;
 
 import java.util.ArrayList;
 import java.util.List;

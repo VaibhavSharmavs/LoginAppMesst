@@ -4,11 +4,11 @@
     <data>
         <variable
             name="chatBoatViewModel"
-            type="com.example.loginapp.viewmodel.chat.ChatBoatViewModel" />
+            type="com.meest.viewmodel.chat.chatboatviewmodels.ChatTextViewModel" />
 
         <variable
             name="messageAdapter"
-            type="com.example.loginapp.view.adapters.chat.MessageAdapter" />
+            type="com.meest.view.adapters.chat.MessageAdapter" />
     </data>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -17,7 +17,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layoutDirection="ltr"
-    tools:context="com.example.loginapp.view.activities.chat.ChatBoatActivity">
+    tools:context="com.meest.view.activities.chat.ChatBoatActivity">
 
 
     <ImageView
@@ -318,7 +318,7 @@
 
 
                 </LinearLayout>
-                <com.example.loginapp.view.activities.chat.components.RecordButton
+                <com.meest.view.activities.chat.components.RecordButton
                     android:id="@+id/iv_microphone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

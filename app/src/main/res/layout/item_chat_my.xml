@@ -3,7 +3,7 @@
     <data>
         <variable
             name="chatTextViewModel"
-            type="com.example.loginapp.viewmodel.chat.chatboatviewmodels.ChatTextViewModel" />
+            type="com.meest.viewmodel.chat.chatboatviewmodels.ChatTextViewModel" />
     </data>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"

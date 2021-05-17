@@ -1,4 +1,4 @@
-package com.example.loginapp.view.activities;
+package com.meest.view.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,14 +27,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.chaos.view.PinView;
-import com.example.loginapp.R;
-import com.example.loginapp.model.signup.RegisterRequest;
-import com.example.loginapp.model.signup.RegisterResponse;
-import com.example.loginapp.model.signup.VerifyOtpAllRequest;
-import com.example.loginapp.model.signup.VerifyOtpAllResponse;
-import com.example.loginapp.network.APIService;
-import com.example.loginapp.network.RetrofitInstance;
-import com.example.loginapp.view.activities.chat.ChatActivity;
 import com.google.android.gms.auth.api.phone.SmsRetriever;
 import com.google.android.gms.auth.api.phone.SmsRetrieverClient;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -51,6 +43,14 @@ import com.google.android.gms.location.LocationSettingsResult;
 import com.google.android.gms.location.LocationSettingsStatusCodes;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.meest.R;
+import com.meest.model.signup.RegisterRequest;
+import com.meest.model.signup.RegisterResponse;
+import com.meest.model.signup.VerifyOtpAllRequest;
+import com.meest.model.signup.VerifyOtpAllResponse;
+import com.meest.network.APIService;
+import com.meest.network.RetrofitInstance;
+import com.meest.view.activities.chat.ChatActivity;
 
 import java.util.TimeZone;
 

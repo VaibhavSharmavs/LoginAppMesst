@@ -1,4 +1,4 @@
-package com.example.loginapp.viewmodel.chat;
+package com.meest.viewmodel.chat;
 
 public class ChatBoatViewModel {
 }

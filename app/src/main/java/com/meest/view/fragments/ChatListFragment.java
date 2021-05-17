@@ -1,4 +1,4 @@
-package com.example.loginapp.view.fragments;
+package com.meest.view.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,15 +11,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.loginapp.R;
-import com.example.loginapp.databinding.FragmentChatListBinding;
-import com.example.loginapp.databinding.FragmentChatStoryBinding;
 import com.example.loginapp.model.chat.ChatListModel;
-import com.example.loginapp.model.chat.ChatStoryFragmentModel;
-import com.example.loginapp.model.chat.ChatStoryListModel;
-import com.example.loginapp.view.activities.chat.ChatBoatActivity;
-import com.example.loginapp.view.adapters.chat.ChatListAdapter;
-import com.example.loginapp.view.adapters.chat.ChatStoryListAdapter;
+import com.meest.R;
+import com.meest.databinding.FragmentChatListBinding;
+import com.meest.view.activities.chat.ChatBoatActivity;
+import com.meest.view.adapters.chat.ChatListAdapter;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,7 +47,7 @@ public class ChatListFragment extends Fragment  {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        fragmentChatListBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_chat_list, container, false);
+        fragmentChatListBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_chat_list, container, false);
 
         ChatListModel chatListModel = new ChatListModel();
         chatListModel.setMsg("hi");
