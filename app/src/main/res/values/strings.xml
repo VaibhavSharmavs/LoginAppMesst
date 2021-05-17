@@ -16,6 +16,22 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="Please_Enable_Location">Please Enable Location</string>
-
+    <string name="my_status">My status</string>
+    <string name="tap_to_add_status_update">Tap to add status update</string>
+    <string name="no_conversation">No Conversation</string>
+    <string name="you_didn_t_made_any_conversation_yetplease_select_username">you didn\'t made any conversation yet.\nplease select username.</string>
+    <string name="Comment">Comment</string>
+    <string name="last_seen_today">Last seen today</string>
+    <string name="typing">typing...</string>
+    <string name="edittext_hint">Click here to edit address</string>
+    <string name="action_send">Send</string>
     <string name="Code_epires_in">Code expire in</string>
+    <string name="message">Message</string>
+    <string name="you_deleted_this_message">You Deleted this message</string>
+    <string name="name">Name</string>
+    <string name="this_message_was_deleted">This message was deleted</string>
+    <string name="add_to_contacts">Add to Contacts</string>
+    <string name="date">Date</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

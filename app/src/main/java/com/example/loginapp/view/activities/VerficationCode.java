@@ -1,4 +1,4 @@
-package com.example.loginapp.activities;
+package com.example.loginapp.view.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,6 +7,7 @@ import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.IntentSender;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -27,13 +28,13 @@ import android.widget.Toast;
 
 import com.chaos.view.PinView;
 import com.example.loginapp.R;
-import com.example.loginapp.model.login.LoginResponseModel;
 import com.example.loginapp.model.signup.RegisterRequest;
 import com.example.loginapp.model.signup.RegisterResponse;
 import com.example.loginapp.model.signup.VerifyOtpAllRequest;
 import com.example.loginapp.model.signup.VerifyOtpAllResponse;
 import com.example.loginapp.network.APIService;
 import com.example.loginapp.network.RetrofitInstance;
+import com.example.loginapp.view.activities.chat.ChatActivity;
 import com.google.android.gms.auth.api.phone.SmsRetriever;
 import com.google.android.gms.auth.api.phone.SmsRetrieverClient;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -105,8 +106,8 @@ public class VerficationCode extends AppCompatActivity {
                 } else {
                     Toast.makeText(VerficationCode.this, "Please Enter OTP", Toast.LENGTH_SHORT).show();
                 }
-//                Intent intent=new Intent(Verification_Code.this, InterestActivity.class);
-//                startActivity(intent);
+                Intent intent = new Intent(getApplicationContext(), ChatActivity.class);
+                startActivity(intent);
             }
         });
         new CountDownTimer(60000, 1000) {
@@ -155,7 +156,7 @@ public class VerficationCode extends AppCompatActivity {
         VerifyOtpAllRequest verifyOtpAllRequest = new VerifyOtpAllRequest();
         verifyOtpAllRequest.setOtp(pinView.getText().toString());
         verifyOtpAllRequest.setUserName(username);
-        verifyOtpAllRequest.setFcmToken("");
+        verifyOtpAllRequest.setFcmToken("fmirXaAxROC4Oi4wIzuKEs:APA91bHrGbu7JXij4HzChl0yJtainoWYbwO8ohNYz9FL5D_pB1ncijSlX-noxeEcwNIXkHyzHgwdDOogOFJynJ73ULTCcJ5mtg2hVw4LlcwFX_fYPtI7y6krYhJhRSRZDqW3fW4LM3xe");
 
         APIService apiService = RetrofitInstance.getRetrofitInstance().create(APIService.class);
         Call<VerifyOtpAllResponse> call = apiService.verifyOtpAll(verifyOtpAllRequest);
@@ -233,6 +234,11 @@ public class VerficationCode extends AppCompatActivity {
 
 
                         Log.d("Register",response.body().getData().getNewUser().getUsername());
+
+                        Intent intent = new Intent(getApplicationContext(),ChatActivity.class);
+                        startActivity(intent);
+
+
 
 
 

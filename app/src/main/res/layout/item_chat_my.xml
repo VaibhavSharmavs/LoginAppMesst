@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="chatTextViewModel"
+            type="com.example.loginapp.viewmodel.chat.chatboatviewmodels.ChatTextViewModel" />
+    </data>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_marginEnd="@dimen/_10sdp"
+    android:layout_marginStart="@dimen/_30sdp"
+    android:layoutDirection="ltr"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:layout_marginRight="@dimen/_10sdp"
+    android:layout_marginLeft="@dimen/_30sdp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/rounded_corner_chat_box_one_bg">
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:layout_gravity="right"
+            android:text="@{chatTextViewModel.message}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16sp"/>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="right"
+                android:layout_marginTop="@dimen/_5sp"
+                android:gravity="right">
+
+                <ImageView
+                    android:id="@+id/iv_message_read_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginRight="@dimen/_3sdp"
+                    android:viewportWidth="15"
+                    android:viewportHeight="11.44" />
+
+                <TextView
+                    android:id="@+id/tv_message_date_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:layout_toRightOf="@+id/iv_message_read_status"
+                    android:text="@{chatTextViewModel.time}"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+
+            </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>
+</layout>
+
+

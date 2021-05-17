@@ -1,32 +1,20 @@
 package com.example.loginapp.viewmodel.login;
 
-import android.animation.ObjectAnimator;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
-import android.text.method.HideReturnsTransformationMethod;
-import android.text.method.PasswordTransformationMethod;
-import android.transition.ChangeBounds;
-import android.transition.TransitionManager;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import androidx.annotation.RequiresApi;
-import androidx.core.content.ContextCompat;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.example.loginapp.R;
-import com.example.loginapp.activities.VerficationCode;
+import com.example.loginapp.view.activities.VerficationCode;
 import com.example.loginapp.model.login.Login;
 import com.example.loginapp.model.login.LoginResponseModel;
-import com.example.loginapp.model.signup.SignUp;
-import com.example.loginapp.model.signup.VerifyUserNameRequest;
 import com.example.loginapp.model.signup.VerifyUserNameResponse;
 import com.example.loginapp.model.signup.components.DatePicker.date.DatePicker;
 import com.example.loginapp.model.signup.components.GenderLayout;
@@ -92,9 +80,20 @@ public class LoginViewModel extends ViewModel {
         login.setUsernameSignUp(userNameSignUp.getValue());
         login.setPasswordSignUp(passwordSignUp.getValue());
 
+        Intent intent = new Intent(context, VerficationCode.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+        intent.putExtra("firstName",login.getFistName());
+        intent.putExtra("lastName",login.getLastName());
+        intent.putExtra("password",login.getPasswordSignUp());
+        intent.putExtra("username",login.getUsernameSignUp());
+        intent.putExtra("gender",login.getGender());
+        intent.putExtra("mobileno",login.getMobileno());
+        intent.putExtra("dob",login.getDob());
+        context.startActivity(intent);
 
 
-        callVerifyAll();
+ //       callVerifyAll();
 
     }
 

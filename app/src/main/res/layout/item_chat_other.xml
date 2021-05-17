@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_marginEnd="@dimen/_30sdp"
+    android:layoutDirection="ltr"
+    android:layout_marginBottom="@dimen/_10sdp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_corner_chat_box_grey_bg">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp">
+
+<!--            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                android:visibility="gone"-->
+<!--                android:layout_width="@dimen/_30sdp"-->
+<!--                android:layout_height="@dimen/_30sdp"-->
+<!--                android:id="@+id/img_profile"-->
+<!--                android:src="@drawable/user_pro_chat"/>-->
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16sp"
+                android:text="Name"
+                android:textStyle="bold"
+                android:gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorLink="@color/color_purple"
+                android:autoLink="web"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16sp"
+                android:text="@string/message"
+                android:gravity="start" />
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/_5sp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sp">
+            <TextView
+                android:text="23 m"
+                android:id="@+id/tv_message_date_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginStart="@dimen/_5sp"
+                android:textSize="@dimen/_13sp"
+                android:layout_marginLeft="@dimen/_5sp" />
+            <ImageView
+                android:visibility="gone"
+                android:layout_marginLeft="5dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_message_recieved"
+                android:layout_toRightOf="@id/tv_message_date_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

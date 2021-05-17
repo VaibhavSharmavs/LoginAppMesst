@@ -56,6 +56,7 @@
 
     <dimen name="_28ssp">28.00sp</dimen>
     <dimen name="_200sdp">200.00dp</dimen>
+    <dimen name="_220sdp">220.00dp</dimen>
     <dimen name="_20sdp">20.00dp</dimen>
     <dimen name="_25sdp">25.00dp</dimen>
     <dimen name="_30sdp">30.00dp</dimen>
@@ -79,6 +80,10 @@
     <dimen name="_25sp">25.00sp</dimen>
     <dimen name="_2sp">2.00sp</dimen>
     <dimen name="_5sp">5.00sp</dimen>
+    <dimen name="_7sp">7.00sp</dimen>
+    <dimen name="_110sdp">110.00dp</dimen>
+    <dimen name="_6sdp">6.00dp</dimen>
+
 
     <dimen name="WheelItemTextSize">14sp</dimen>
     <dimen name="WheelSelectedItemTextSize">20sp</dimen>

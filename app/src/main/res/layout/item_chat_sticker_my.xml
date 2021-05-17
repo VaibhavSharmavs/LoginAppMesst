@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layoutDirection="ltr"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="28dp"
+        android:layout_alignParentRight="true">
+
+        <RelativeLayout
+            android:id="@+id/rl_image_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_round_sticker"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_alignParentEnd="true"
+                android:scaleType="fitXY"
+
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_image_layout"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="4dp"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/iv_message_read_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:viewportWidth="15"
+                android:viewportHeight="11.44" />
+
+            <TextView
+                android:id="@+id/tv_date_time_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:layout_toRightOf="@+id/iv_message_read_status"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
