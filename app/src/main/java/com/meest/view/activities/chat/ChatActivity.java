@@ -7,11 +7,12 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.WindowManager;
 
-import com.example.loginapp.view.adapters.ViewPagerApdater;
 
 import com.google.android.material.tabs.TabLayout;
 import com.meest.R;
+import com.meest.view.adapters.chat.ViewPagerApdater;
 import com.meest.view.fragments.CallHistoryFragment;
 import com.meest.view.fragments.ChatListFragment;
 import com.meest.view.fragments.ChatStoryFragment;
@@ -36,6 +37,10 @@ public class ChatActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
         setContentView(R.layout.activity_chat);
 
 

@@ -5,7 +5,7 @@
 
             <variable
             name="storyViewModel"
-            type="com.meest.viewmodel.chat.StoryViewModel"/>
+            type="com.meest.viewmodel.story.StoryViewModel"/>
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"

@@ -1,4 +1,4 @@
-package com.meest.model.chat;
+package com.meest.model.story;
 
 public class ChatStoryFragmentModel {
 

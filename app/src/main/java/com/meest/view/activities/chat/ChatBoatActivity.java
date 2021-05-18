@@ -5,6 +5,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.os.Bundle;
+import android.view.WindowManager;
 
 import com.meest.R;
 import com.meest.databinding.ActivityChatBoatBinding;

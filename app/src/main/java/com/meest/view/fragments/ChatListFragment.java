@@ -26,7 +26,7 @@ public class ChatListFragment extends Fragment  {
 
     FragmentChatListBinding fragmentChatListBinding;
     ChatListAdapter chatListAdapter;
-    List<ChatListModel> chatListModelList= new ArrayList<>();
+    List<ChatListModel> chatListModelList;
 
 
 
@@ -48,8 +48,11 @@ public class ChatListFragment extends Fragment  {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         fragmentChatListBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_chat_list, container, false);
+        fragmentChatListBinding.setLifecycleOwner(this);
+
 
         ChatListModel chatListModel = new ChatListModel();
+        chatListModelList = new ArrayList<>();
         chatListModel.setMsg("hi");
         chatListModel.setUsername("vbv");
         chatListModel.setMsgCount("1");

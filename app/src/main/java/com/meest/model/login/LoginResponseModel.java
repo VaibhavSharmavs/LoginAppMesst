@@ -13,9 +13,21 @@ public class LoginResponseModel {
     @SerializedName("success")
     public boolean success;
 
+    public String getErrorMessage() {
+        return errorMessage;
+    }
+
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+    }
+
     public int getCode() {
         return code;
     }
+
+
+    @SerializedName("errorMessage")
+    public String errorMessage;
 
     public Data getData() {
         return data;

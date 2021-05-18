@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.meest.R;
 import com.meest.databinding.RowChatStoryItemBinding;
-import com.meest.model.chat.ChatStoryListModel;
-import com.meest.viewmodel.chat.StoryViewModel;
+import com.meest.model.story.ChatStoryListModel;
+import com.meest.viewmodel.story.StoryViewModel;
 
 import java.util.ArrayList;
 import java.util.List;

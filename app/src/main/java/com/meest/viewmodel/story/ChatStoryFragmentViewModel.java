@@ -1,10 +1,10 @@
-package com.meest.viewmodel.chat;
+package com.meest.viewmodel.story;
 
 
 
 import androidx.lifecycle.ViewModel;
 
-import com.meest.model.chat.ChatStoryFragmentModel;
+import com.meest.model.story.ChatStoryFragmentModel;
 
 
 public class ChatStoryFragmentViewModel extends ViewModel {

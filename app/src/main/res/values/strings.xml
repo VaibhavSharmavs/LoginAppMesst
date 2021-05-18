@@ -31,6 +31,9 @@
     <string name="name">Name</string>
     <string name="this_message_was_deleted">This message was deleted</string>
     <string name="add_to_contacts">Add to Contacts</string>
+    <string name="you_didn_t_made_any_conversationyetplease_select_username">you didn\'t made any conversation yet.\nplease select username.</string>
+    <string name="no_calls">No Calls</string>
+    <string name="you_didn_t_made_any_conversation_yet_nplease_select_username">you didn\'t made any conversation yet.\nplease select username.</string>
     <string name="date">Date</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

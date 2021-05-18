@@ -39,7 +39,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class    MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView tv_signUp,tv_login;
     RelativeLayout login_rl,signup_rl,login_submit,signUp_submit;
@@ -162,7 +162,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             signup_rl.setTranslationX(0);
             ll_login.setVisibility(View.GONE);
             forgor_ll.setVisibility(View.GONE);
-            signUp_submit.setVisibility(View.VISIBLE);
+            login_submit.setVisibility(View.VISIBLE);
             ll_signup.setVisibility(View.VISIBLE);
             login_rl.setBackgroundResource(0);
             signup_rl.setBackgroundResource(R.drawable.drop_shadow_1);

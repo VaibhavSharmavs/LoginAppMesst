@@ -21,6 +21,7 @@ import com.meest.model.signup.components.VerifyAllRequest;
 import com.meest.network.APIService;
 import com.meest.network.RetrofitInstance;
 import com.meest.view.activities.VerficationCode;
+import com.meest.view.activities.chat.ChatActivity;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -235,7 +236,7 @@ public class LoginViewModel extends ViewModel {
 
     public void onLoginClick(){
 
-        login.setUsername(username.getValue());
+        login.setUsername("+91"+username.getValue());
         login.setPassword(password.getValue());
         login.setFcmToken("fmirXaAxROC4Oi4wIzuKEs:APA91bHrGbu7JXij4HzChl0yJtainoWYbwO8ohNYz9FL5D_pB1ncijSlX-noxeEcwNIXkHyzHgwdDOogOFJynJ73ULTCcJ5mtg2hVw4LlcwFX_fYPtI7y6krYhJhRSRZDqW3fW4LM3xe");
 
@@ -244,7 +245,7 @@ public class LoginViewModel extends ViewModel {
             callLogin();
 
         }else{
-            Toast.makeText(context,"Please Enter valid mobile no",Toast.LENGTH_SHORT).show();
+            Toast.makeText(context.getApplicationContext(),"Please Enter valid mobile no",Toast.LENGTH_SHORT).show();
         }
 
     }
@@ -259,8 +260,18 @@ public class LoginViewModel extends ViewModel {
             @Override
             public void onResponse(Call<LoginResponseModel> call, Response<LoginResponseModel> response) {
 
+                if(response.code()==200&& response.body() != null && response.body().isSuccess()){
                 Log.d("LoginResponse", response.body().getData().getToken());
 
+                Intent intent = new Intent(context, ChatActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+                    context.startActivity(intent);
+                }
+                else{
+
+                    Toast.makeText(context.getApplicationContext(), "User not Found",Toast.LENGTH_SHORT).show();
+                }
             }
 
             @Override

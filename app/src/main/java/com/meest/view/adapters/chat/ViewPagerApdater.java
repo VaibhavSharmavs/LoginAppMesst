@@ -1,4 +1,4 @@
-package com.example.loginapp.view.adapters;
+package com.meest.view.adapters.chat;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;

@@ -5,6 +5,8 @@
     <variable
         name="chatListAdapter"
         type="com.meest.view.adapters.chat.ChatListAdapter" />
+
+
     </data>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"

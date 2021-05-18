@@ -1,5 +1,6 @@
 package com.meest.view.adapters.chat;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.loginapp.model.chat.ChatListModel;
 import com.meest.R;
 import com.meest.databinding.ChatListAdapterBinding;
+import com.meest.view.activities.chat.ChatBoatActivity;
 import com.meest.viewmodel.chat.ChatViewModel;
 
 import java.util.List;
@@ -47,6 +49,17 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
 
         holder.setChatStoryList(chatListModelList.get(position));
 
+        holder.getChatListAdapterBinding().layoutMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+     //           mItemClickListener.onItemClick(position);
+
+                Intent intent = new Intent(activity, ChatBoatActivity.class);
+                activity.startActivity(intent);
+
+            }
+        });
+
     }
 
     @Override
@@ -62,6 +75,10 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
 
         public ViewHolder( View itemView) {
             super(itemView);
+        }
+
+        public ChatListAdapterBinding getChatListAdapterBinding() {
+            return chatListAdapterBinding;
         }
 
         public void setBinding(ChatListAdapterBinding chatListAdapterBinding){

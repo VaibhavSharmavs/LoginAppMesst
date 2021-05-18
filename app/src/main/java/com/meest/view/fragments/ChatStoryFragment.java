@@ -12,10 +12,10 @@ import android.view.ViewGroup;
 
 import com.meest.R;
 import com.meest.databinding.FragmentChatStoryBinding;
-import com.meest.model.chat.ChatStoryFragmentModel;
-import com.meest.model.chat.ChatStoryListModel;
+import com.meest.model.story.ChatStoryFragmentModel;
+import com.meest.model.story.ChatStoryListModel;
 import com.meest.view.adapters.chat.ChatStoryListAdapter;
-import com.meest.viewmodel.chat.ChatStoryFragmentViewModel;
+import com.meest.viewmodel.story.ChatStoryFragmentViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
