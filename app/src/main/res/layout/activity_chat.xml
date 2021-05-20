@@ -44,7 +44,6 @@
                             android:layout_height="@dimen/size_60dp"
                             android:gravity="center"
                             android:padding="@dimen/size_5dp">
-
                             <include layout="@layout/chat_main_header" />
 
                         </LinearLayout>
@@ -139,7 +138,6 @@
                 android:layout_marginBottom="@dimen/size_8dp"
                 android:tabStripEnabled="false"
                 app:tabRippleColor="@null"
-
                 android:background="@android:color/transparent"
                 app:tabMode="fixed">
 

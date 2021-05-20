@@ -40,6 +40,7 @@
     <dimen name="text_size_16sp">16sp</dimen>
     <dimen name="text_size_18sp">18sp</dimen>
     <dimen name="text_size_20sp">20sp</dimen>
+    <dimen name="text_size_28sp">28sp</dimen>
 
     <dimen name="_25ssp">25.00sp</dimen>
     <dimen name="_4ssp">4.00sp</dimen>

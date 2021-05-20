@@ -30,7 +30,6 @@ public class ChatActivity extends AppCompatActivity {
 
     private int[] tabIconArray = {R.drawable.selected_story,
             R.drawable.selected_chat,
-            R.drawable.selected_group,
             R.drawable.selected_call,
             R.drawable.selected_reminder};
 
@@ -47,7 +46,7 @@ public class ChatActivity extends AppCompatActivity {
         mFragments = new ArrayList<>();
         mFragments.add(new ChatStoryFragment());
         mFragments.add(new ChatListFragment());
-        mFragments.add(new GroupFragment());
+   //     mFragments.add(new GroupFragment());
         mFragments.add(new CallHistoryFragment());
         mFragments.add(new TaskListFragment());
 

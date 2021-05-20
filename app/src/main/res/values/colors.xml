@@ -290,4 +290,11 @@
     <color name="first_color">#A019A2</color>
     <color name="second_color">#3F20DB</color>
     <color name="new_medley_color">#143988</color>
+
+
+    <!--gradient color-->
+    <color name="start_color">#BA26FC</color>
+    <color name="end_color">#0944BC</color>
+
+
 </resources>
